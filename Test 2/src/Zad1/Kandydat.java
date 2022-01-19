@@ -8,14 +8,14 @@ public class Kandydat implements Cloneable, Comparable<Kandydat>{
 
     private String nazwa;
     private int wiek;
-    private String wykształcenie;
+    private String wyksztalcenie;
     private int lataDoswiadczenia;
 
 
     public Kandydat(String nazwa, int wiek, String wykształcenie, int lataDoswiadczenia) {
         this.nazwa = nazwa;
         this.wiek = wiek;
-        this.wykształcenie = wykształcenie;
+        this.wyksztalcenie = wykształcenie;
         this.lataDoswiadczenia = lataDoswiadczenia;
     }
 
@@ -23,12 +23,12 @@ public class Kandydat implements Cloneable, Comparable<Kandydat>{
     public int compareTo(Kandydat k) {
         int compared = 0;
 
-        if(this.wykształcenie.equals("magister") ){
-            if(k.wykształcenie.equals("licencjat"))
+        if(this.wyksztalcenie.equals("magister") ){
+            if(k.wyksztalcenie.equals("licencjat"))
                 compared+=1000;
         }
-        if(this.wykształcenie.equals("licencjat")){
-            if(k.wykształcenie.equals("magister")){
+        if(this.wyksztalcenie.equals("licencjat")){
+            if(k.wyksztalcenie.equals("magister")){
                 compared-=500;
             }
         }
@@ -65,11 +65,11 @@ public class Kandydat implements Cloneable, Comparable<Kandydat>{
     }
 
     public String getWykształcenie() {
-        return wykształcenie;
+        return wyksztalcenie;
     }
 
     public void setWykształcenie(String wykształcenie) {
-        this.wykształcenie = wykształcenie;
+        this.wyksztalcenie = wykształcenie;
     }
 
     public int getLataDoswiadczenia() {
